@@ -1,36 +1,34 @@
+from datetime import datetime
+from domain import Seller
+from domain import Buyer
+
+
 class Article:
-    id_product = int
+    id = str
     name: str
     item_id: int
     description: str
     category: str
     price: float
-    availability: int
-    seller: str
+    stock: int
+    seller: Seller
+    buyer: Buyer
     average_rating: float
     comments: [str]
-    images: [str]
-    features: [str, str]
-    ratings: [float]
-    publication_date: str
-    status: str
+    date_created: datetime
     shipping_methods: [str]
 
-    def __init__(self, id_product, name, item_id, description, category, price, availability, seller, average_rating, comments,
-                 images, features, ratings, publication_date, status, shipping_methods):
-        self.id_product = id_product
+    def __init__(self, id, name, item_id, description, category, price, stock, seller, buyer, average_rating, comments, date_created, shipping_methods):
+        self.id = id
         self.name = name
         self.item_id = item_id
         self.description = description
         self.category = category
         self.price = price
-        self.availability = availability
+        self.stock = stock
         self.seller = seller
+        self.buyer = buyer
         self.average_rating = average_rating
         self.comments = comments
-        self.images = images
-        self.features = features
-        self.ratings = ratings
-        self.publication_date = publication_date
-        self.status = status
+        self.date_created = date_created
         self.shipping_methods = shipping_methods
