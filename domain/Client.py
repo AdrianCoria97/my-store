@@ -10,7 +10,7 @@ class Client:
     email: str
     status: bool
 
-    def __init__(self, id:str, name: str, last_name: str, age: int, address: str, city: str,
+    def __init__(self, id: str, name: str, last_name: str, age: int, address: str, city: str,
                  zip_code: str, phone: str, email: str, status: bool):
         self.id = id
         self.name = name
@@ -24,7 +24,7 @@ class Client:
         self.status = status
 
     # GETTERS
-    def get_name(self):
+    def get_name_client(self):
         return self.name
 
     def get_last_name(self):
@@ -52,7 +52,7 @@ class Client:
         return self.status
 
     # SETTERS
-    def set_name(self, new_name):
+    def set_name_client(self, new_name):
         self.name = new_name
 
     def set_last_name(self, new_last_name):
